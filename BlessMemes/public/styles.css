@@ -1,6 +1,5 @@
 /* Define root variables for light and dark modes */
 :root {
-    /* Light mode (default) */
     --background-color: yellow;
     --text-color: #000000;
     --border-color: #000000;
@@ -21,7 +20,6 @@
 }
 
 body.dark-mode {
-    /* Dark mode */
     --background-color: #1a1a1a;
     --text-color: #ffffff;
     --border-color: #ffffff;
@@ -399,8 +397,8 @@ body {
     gap: 1vh;
     box-sizing: border-box;
     background-color: var(--container-bg);
-    min-height: 0; /* Allow shrinking */
-    height: auto; /* Let content dictate height */
+    min-height: 0;
+    height: auto;
 }
 
 .meme-description {
@@ -445,6 +443,7 @@ body {
     font-size: 1vw;
     word-wrap: break-word;
     max-width: calc(100% - 7vw);
+    text-align: left; /* Explicitly added */
 }
 
 .meme-buttons {
