@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bless Memes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="banner-container">
+        <div id="banner" class="banner">
+            <img id="banner-image" src="" alt="Banner Image">
+            <h1>Welcome to Bless Memes!</h1>
+            <p>Share and vote on memes below!</p>
+            <div class="header-controls">
+                <button id="mode-toggle">Toggle Mode</button>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div id="admin-banner-form" style="display: none;">
+            <h3>Customize Banner Image (Admin Only)</h3>
+            <input type="text" id="banner-input" placeholder="Enter banner image URL">
+            <button id="update-banner-btn">Update Banner</button>
+        </div>
+        <div class="meme-input-container">
+            <input type="text" id="meme-url" placeholder="Paste image URL here">
+            <button id="update-meme">Add Meme</button>
+        </div>
+        <div class="sort-pagination-wrapper">
+            <div class="sort-container">
+                <label for="sort-options">Sort by:</label>
+                <select id="sort-options">
+                    <option value="most-votes">Most Votes</option>
+                    <option value="least-votes">Least Votes</option>
+                    <option value="latest-uploaded">Latest Uploaded</option>
+                    <option value="oldest-uploaded">Oldest Uploaded</option>
+                    <option value="most-comments">Most Comments</option>
+                </select>
+            </div>
+            <div class="pagination-container top-pagination">
+                <button id="prev-page-top" disabled>Previous</button>
+                <span id="page-info-top">Page 1</span>
+                <button id="next-page-top" disabled>Next</button>
+            </div>
+        </div>
+        <div id="memes-container"></div>
+        <div class="pagination-container bottom-pagination">
+            <button id="prev-page" disabled>Previous</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-page" disabled>Next</button>
+        </div>
+        <button id="admin-btn">I am an Admin</button>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

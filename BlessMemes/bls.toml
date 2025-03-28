@@ -1,0 +1,28 @@
+name = "template_name"
+version = "1.0.0"
+type = "text"
+production_host = "harlequin-yak-sonny-x7qplqce.bls.dev"
+
+[deployment]
+permission = "public"
+nodes = 1
+
+[build]
+dir = "build"
+entry = "template_name_debug.wasm"
+command = "npm run build:debug"
+
+[build_release]
+dir = "build"
+entry = "template_name.wasm"
+command = "npm run build:release"
+
+[[deployments]]
+name = "blessnet"
+description = ""
+cid = "bafybeiakrrvuqagq5qifnlmkabswcs7wjwiidxyo44qqvldmqzunxlhyhq"
+created = "2025-03-27T20:56:58.549Z"
+
+  [deployments.runtime]
+  url = "blessnet.tar.gz"
+  checksum = "af1ce7220f7c434fd471b27db33f408e397e11751bd89b64bda5f5db57572e5f"
